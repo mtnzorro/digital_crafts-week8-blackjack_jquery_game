@@ -56,6 +56,7 @@ getCardImageUrl = function(card){
 };
 
 var deck = tripleDeck();
+var winnings = 500;
 var dealerHand = [];
 var playerHand = [];
 var d_points = 0;
@@ -63,14 +64,18 @@ var p_points = 0;
 var d_wins = 0;
 var p_wins = 0;
 var hidden_image_url;
+var bet_amount = 0;
+var win_amount = 0;
 var random_generate = function() {
   return Math.floor(Math.random() * (deck.length - 1));
 };
 $('#score').hide();
 $('#hit-button').hide();
 $('#stand-button').hide();
+$('#winnings').text("$"+winnings);
 var random;
 $('#reset-button').hide();
+$("#current_bet_row").hide();
 dealer_deal = function(){
   random = random_generate();
   var deal = deck.splice(random, 1);
@@ -146,17 +151,19 @@ $(function() {
     dealer_hide_deal();
     player_deal();
       player_deal();
-    // setTimeout(dealer_deal, 1000);
-    // setTimeout(player_deal, 2000);
-    // setTimeout(player_deal, 3000);
     d_points = calculatePoints(dealerHand);
-    // $("#dealer-points").text(d_points);
     p_points = calculatePoints(playerHand);
     $("#player-points").text(p_points);
     $("#deal-button").hide();
     $('#hit-button').show();
     $('#stand-button').show();
-
+    bet_amount = $("#bet_box").val();
+    $("#current_bet_row").show();
+    $("#current_bet").text("$"+ bet_amount);
+    console.log("Bet amount:" + bet_amount);
+    winnings -= bet_amount;
+    $("#bet_box").hide();
+    $("#winnings").text("$" + winnings);
   });
 
   $('#hit-button').click(function() {
@@ -189,7 +196,10 @@ $(function() {
     if (d_points > 21) {
       console.log("Dealer busts");
       $("#dealer-points").text(d_points + ": Bust!");
+      $("#player-points").text(p_points + ": Player Wins!!");
       p_wins += 1;
+      winnings += bet_amount * 2;
+      $("#winnings").text("$" + winnings);
 
     }
     else{
@@ -197,16 +207,19 @@ $(function() {
         $("#dealer-points").text(d_points + ": Dealer Wins!!");
         d_wins += 1;
 
+
       }
       else if (d_points < p_points){
         $("#player-points").text(p_points + ": Player Wins!!");
         p_wins += 1;
-
+        winnings += bet_amount * 2;
+          $("#winnings").text("$" + winnings);
       }
       else {
         $("#player-points").text(p_points + ": Draw!!");
         $("#dealer-points").text(d_points + ": Draw!!");
-
+        winnings += bet_amount;
+          $("#winnings").text("$" + winnings);
       }
     }
     $('#reset-button').show();
@@ -230,6 +243,9 @@ $(function() {
     $("#dealer-wins").text(d_wins);
     $("#score").show();
       $('#reset-button').hide();
+    $("#bet_table").css("margin-top", "30px");
+    $("#bet_box").val('').show();
+    $("#current_bet_row").hide();
   });
 
 });

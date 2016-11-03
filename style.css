@@ -44,6 +44,17 @@ button{
     font-family: 'Quicksand', sans-serif;
 }
 
+#bet_box{
+  height: 26px;
+  width: 140px;
+  border-radius: 4px;
+  font-size: 1.1em;
+  font-family: 'Quicksand', sans-serif;
+}
+
+td {
+  padding: 4px;
+}
 .buttons{
   margin-top: 50px;
   text-align: center;
@@ -59,4 +70,10 @@ button{
 #reset-button {
   height: 50px;
     width: 70px;
+}
+
+#bet_table {
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 120px;
+    font-size: 1.3em;
 }

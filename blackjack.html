@@ -24,6 +24,7 @@
   <div id="player-hand" class="hand">
   </div>
   <div class="buttons">
+    <input  id="bet_box" type="text" name="name" placeholder="Place a bet:" value="">
     <button id="deal-button">Deal</button>
     <button id="hit-button">Hit</button>
     <button id="stand-button">Stand</button>
@@ -39,6 +40,17 @@
       <td>Dealer Wins: </td>
       <td id="dealer-wins"></td>
     </tr>
+  </table>
+  <table id="bet_table">
+    <tr>
+      <td>Cash:  </td>
+      <td id="winnings"></td>
+    </tr>
+    <tr id="current_bet_row">
+      <td>Current bet:  </td>
+      <td id="current_bet"></td>
+    </tr>
+
   </table>
   </body>
   <script src="script.js"></script>

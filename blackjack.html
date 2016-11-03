@@ -5,14 +5,19 @@
     <title>BLACKJACK!!</title>
     <script src="jquery-3.1.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div class="header">
+      <h1>CASINO JAVIN</h1>
+    </div>
     <div id="table">
   <div id="messages"></div>
   <label>Dealer: </label>
   <label id="dealer-points" class="points"></label>
   <div id="dealer-hand" class="hand">
+    <!-- <img class = "animated slideInLeft" src="images/pokemon_back.png" alt="" /> -->
   </div>
   <label>Player: </label>
   <label id="player-points" class="points"></label>
@@ -22,8 +27,19 @@
     <button id="deal-button">Deal</button>
     <button id="hit-button">Hit</button>
     <button id="stand-button">Stand</button>
+    <button id="reset-button">New Game</button>
   </div>
-</div>
+  </div>
+  <table id="score">
+    <tr>
+      <td>Player Wins: </td>
+      <td id="player-wins"></td>
+    </tr>
+    <tr>
+      <td>Dealer Wins: </td>
+      <td id="dealer-wins"></td>
+    </tr>
+  </table>
   </body>
   <script src="script.js"></script>
 </html>

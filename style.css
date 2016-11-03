@@ -1,5 +1,6 @@
 body{
   margin: 0;
+  background-color: maroon;
 }
 label{
   padding: 10px 0 10px 0;
@@ -7,14 +8,21 @@ label{
   font-family: 'Quicksand', sans-serif;
 
 }
+
+.header{
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 23px;
+}
+
 #table {
   background: maroon;
   height: 400px;
 }
 
 img {
-  height: 100px;
-  width: 75px;
+  height: 200px;
+  width: 150px;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -22,12 +30,33 @@ img {
 .hand{
   background: black;
   width: 100%;
-  height: 100px;
+  height: 200px;
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
+button{
+  height: 30px;
+    width: 60px;
+    font-size: 1.1em;
+    border-radius: 4px;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+}
+
 .buttons{
-  margin-top: 60px;
+  margin-top: 50px;
   text-align: center;
+  padding: 20px;
+}
+
+#score {
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 160px;
+    font-size: 1.3em;
+}
+
+#reset-button {
+  height: 50px;
+    width: 70px;
 }

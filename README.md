@@ -54,10 +54,10 @@ The Deck Object:
     this.cards.push(new Card(i,'diamonds'));
   }
 }
-
+```
+```
 Deck.prototype.shuffle = function(){
   var m = this.cards.length, temp, index;
-
   while (m) {
 
     index = Math.floor(Math.random() * m--);
@@ -66,7 +66,6 @@ Deck.prototype.shuffle = function(){
     this.cards[m] = this.cards[index];
     this.cards[index] = temp;
   }
-
   return this.cards;
 };
 ```

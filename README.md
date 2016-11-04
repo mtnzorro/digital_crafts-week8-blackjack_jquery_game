@@ -45,7 +45,7 @@ Example Code:
 
 The Deck Object:
 
-function Deck(){
+```function Deck(){
   this.cards = [];
   for (i=1; i<14; i++) {
     this.cards.push(new Card(i,'spades'));
@@ -69,7 +69,7 @@ Deck.prototype.shuffle = function(){
 
   return this.cards;
 };
-
+```
 
 Screen shot:
 

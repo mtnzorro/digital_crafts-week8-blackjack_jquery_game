@@ -79,4 +79,4 @@ Deck.prototype.shuffle = function(){
 
 Screen shot:
 
-
+screen_shot_blackjack1.png

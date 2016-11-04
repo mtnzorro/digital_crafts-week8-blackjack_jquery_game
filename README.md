@@ -1,15 +1,15 @@
-Blackjack/Casino Javin
+## Blackjack/Casino Javin
 
-Website:  time_for_blackjack.surge.sh
+#### Website:  (http://time_for_blackjack.surge.sh)
 
-Contents:
+#### Contents:
 
-Overview 
-Technologies
-Contributors 
-Example Code
+##### Overview 
+##### Technologies
+##### Contributors 
+##### Example Code
 
-Overview:
+#### Overview:
 As an exercise in both Object Oriented programming, test driven development, and JQuery, the project challenged us to design a blackjack game with basic functionality:
 A button to initiate the game via card images dealt to both the dealer and player
 Tracking of card value points with a dynamic display feature
@@ -17,31 +17,31 @@ Ability to Hit or Stand as a player during gameplay
 Determining a Winner
 Restarting the game
 
-Added feautures include:
+##### Added feautures include:
 The ability to place bets and track winnings
 A dealer card that is face down, along with hidden dealer points 
 Card animations at deal and hit
 
-Technologies:
+##### Technologies:
 JavaScript
 JQuery
 HTML
 CSS
 
-Object Oriented Design:
+##### Object Oriented Design:
 Object classes were implemented as part of functionality including:
 Card Object (stores a point(numeric) value along with suit)
 Hand Object (stores an array of Card objects during each hand, along with a method for totalling the points in a given hand)
 Deck Object (an instance of a given deck of 52 cards, including a shuffle and card draw method)
 
-Test Driven Development:
+###### Test Driven Development:
 Object classes and other functionality was developed by writing and implementing tests in Jasmine testing environment.
 
-Contributors:
+##### Contributors:
 Jason Campbell
 Kevin Farmer
 
-Example Code:
+##### Example Code:
 
 The Deck Object:
 
@@ -58,6 +58,8 @@ function Deck(){
 }
 
 ```
+The Shuffle Method
+
 ```
 
 Deck.prototype.shuffle = function(){

@@ -10,12 +10,12 @@
 ##### Example Code
 
 #### Overview:
-As an exercise in both Object Oriented programming, test driven development, and JQuery, the project challenged us to design a blackjack game with basic functionality:
-A button to initiate the game via card images dealt to both the dealer and player
-Tracking of card value points with a dynamic display feature
-Ability to Hit or Stand as a player during gameplay
-Determining a Winner
-Restarting the game
+As an exercise in Object Oriented programming, test driven development, and JQuery, the project challenged us to design a blackjack game with basic functionality:
+#####A button to initiate the game via card images dealt to both the dealer and player
+#####Tracking of card value points with a dynamic display feature
+#####Ability to Hit or Stand as a player during gameplay
+#####Determining a Winner
+#####Restarting the game
 
 ##### Added feautures include:
 The ability to place bets and track winnings
